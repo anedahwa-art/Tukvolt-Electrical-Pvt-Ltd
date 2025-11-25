@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tukvolt Electrical Pvt Ltd — Solar Installation Zimbabwe</title>
+  <meta name="description" content="Tukvolt Electrical Pvt Ltd — affordable, reliable solar installations for homes and businesses in Zimbabwe." />
+  <meta name="theme-color" content="#0a1a3a" />
+
+  <style>
+    :root{
+      --brand:#0a1a3a;
+      --accent:#00c4ff;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --radius:12px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#0b1720;
+      background: #f4f6f8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    /* NAV */
+    .site-header{
+      width:100%;
+      background:linear-gradient(90deg,var(--brand), #0f3a6b);
+      color:white;
+      position:sticky;
+      top:0;
+      z-index:1200;
+      box-shadow:0 2px 12px rgba(2,6,23,0.1);
+    }
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:16px 0;
+    }
+    
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand .logo{
+      width:48px;height:48px;border-radius:10px;background:white;display:flex;align-items:center;justify-content:center;color:var(--brand);font-weight:700;
+      box-shadow:0 6px 18px rgba(2,6,23,0.12);
+    }
+    .brand h1{font-size:18px;margin:0;line-height:1}
+    .nav-links{display:flex;gap:18px;align-items:center}
+    .nav-links a{color:white;text-decoration:none;font-weight:600}
+    .nav-links a:hover{
+      color:rgb(26, 186, 214);
+    }
+
+    .cta-btn{background:var(--accent);color:#032028;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .cta-btn:hover{
+      color: white;
+    }
+
+    /* Hamburger for mobile */
+    .hamburger{display:none;border:0;background:transparent;color:white;font-size:22px}
+
+    /* HERO */
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 460px;
+      gap:28px;
+      align-items:center;
+      padding:64px 0;
+    }
+    .hero-card{
+      background:var(--card);
+      padding:34px;border-radius:16px;box-shadow:0 18px 50px rgba(11,61,145,0.06);
+    }
+    .eyebrow{display:inline-block;padding:6px 10px;border-radius:999px;background:#e8f6ff;color:var(--brand);font-weight:700;font-size:13px}
+    .hero h2{font-size:34px;margin:12px 0 8px;color:#072146}
+    .hero p{color:var(--muted);margin-bottom:18px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:12px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:var(--accent);color:#04202b}
+    .btn-ghost{background:transparent;border:1px solid rgba(11,61,145,0.08);color:var(--brand)}
+    .btn-ghost  :hover{
+      color: white; 
+    }
+
+    /* Image panel */
+    .hero-image{width:100%;border-radius:16px;overflow:hidden;box-shadow:0 12px 40px rgba(2,6,23,0.08)}
+    .hero-image img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* Sections */
+    .section{padding:48px 0}
+    .section-title{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+    .section-title h3{margin:0;font-size:22px;color:#072146}
+    .muted{color:var(--muted)}
+
+    /* Grid */
+    .grid{display:grid;gap:20px}
+    .services-grid{grid-template-columns:repeat(3,1fr)}
+    .products-grid{grid-template-columns:repeat(3,1fr)}
+    .card{
+      background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(2,6,23,0.04);
+      box-shadow:0 6px 20px rgba(2,6,23,0.04);
+      text-align:left;
+    }
+    .card img{width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:12px}
+    .card h4{margin:0 0 8px}
+    .stat-row{display:flex;gap:12px;margin-top:14px}
+    .stat{background:linear-gradient(180deg,#fff,#fbfdff);padding:12px;border-radius:10px;flex:1;text-align:center}
+
+    /* Contact form */
+    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:24px}
+    form {display:grid;gap:12px}
+    input,textarea,select{padding:12px;border-radius:8px;border:1px solid #d1dbe8;font-size:15px;width:100%}
+    .submit{background:var(--brand);color:white;padding:12px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+
+    /* Footer */
+    footer{padding:28px 0;margin-top:40px;background:transparent;color:var(--muted)}
+
+    /* Responsive rules */
+    @media (max-width:1100px){
+      .hero{grid-template-columns:1fr}
+      .services-grid{grid-template-columns:repeat(2,1fr)}
+      .products-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:760px){
+      .nav-links{display:none}
+      .hamburger{display:block}
+      .services-grid{grid-template-columns:1fr}
+      .products-grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .hero{padding:28px 0}
+      .brand h1{font-size:16px}
+    }
+
+    /* Floating WhatsApp button */
+    .whatsapp-float{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:1500;
+    }
+    .whatsapp-float a{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:#25D366;color:white;padding:12px 14px;border-radius:999px;font-weight:700;text-decoration:none;box-shadow:0 10px 30px rgba(37,211,102,0.18)
+    }
+    .small-note{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+    <div class="container nav">
+      <div class="brand" aria-hidden="false">
+        <div>
+          <h1>Tukvolt Electrical Pvt Ltd</h1>
+          <div class="small-note">Affordable Solar Installations — Zimbabwe</div>
+        </div>
+      </div>
+
+      <nav aria-label="Primary" style="display:flex;align-items:center;gap:12px">
+        <div class="nav-links" role="navigation" aria-label="Main">
+          <a href="#services">Services</a>
+          <a href="#products">Products</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        
+
+        <!-- WhatsApp CTA (same as main CTA) -->
+        <a class="cta-btn" href="https://wa.me/263712475438?text=Hello%20Tukvolt%2C%20I%20am%20interested%20in%20a%20solar%20installation%20quotation." target="_blank" rel="noopener">Get a Free Quote</a>
+
+        <button class="hamburger" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+      </nav>
+      
+    </div>
+  </header>
+
+  <main class="container" style="padding:24px 20px 60px;">
+    <!-- HERO -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-card">
+        <span class="eyebrow">Solar Solutions • Zimbabwe</span>
+        <h2>Power your home or business with reliable solar installations</h2>
+        <p class="muted">Tukvolt Electrical provides professional design, supply, installation and maintenance of solar systems — affordable, dependable, and tailored to your needs.</p>
+
+        <div class="hero-actions" style="margin-top:18px">
+          <!-- WhatsApp CTA (primary) -->
+          <a class="btn btn-primary" href="https://wa.me/263789925225?text=Hello%20Tukvolt%2C%20I%20need%20a%20solar%20installation%20quotation." target="_blank" rel="noopener">Get a Free Quote</a>
+          <a class="btn btn-ghost" href="#services">View Services</a>
+        </div>
+
+        <div style="margin-top:16px" class="small-note">Free site assessment • Financing options available • Local installers</div>
+      </div>
+
+      <div class="hero-image" aria-hidden="false">
+        <img src="c.jpg" alt="Solar panels on rooftop with blue sky">
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section" aria-labelledby="services-heading">
+      <div class="section-title">
+        <h3 id="services-heading">Our Solar Installation Services</h3>
+        <div class="muted">Complete solar services from design to maintenance — residential and commercial.</div>
+      </div>
+
+      <div class="grid services-grid" style="margin-top:18px">
+        <article class="card" role="article" aria-labelledby="srv1">
+          <img src="kk.jpeg" alt="Home rooftop solar panels">
+          <h4 id="srv1">Home Solar Systems</h4>
+          <p class="muted">Custom house systems: off-grid, hybrid or grid-tied setups that dramatically reduce monthly bills.</p>
+        </article>
+
+        <article class="card" role="article" aria-labelledby="srv2">
+          <!-- Use the uploaded local image file for Business & Office Solar -->
+          <img src="up.jpg" alt="Business rooftop solar panels on a commercial building" />
+          <h4 id="srv2">Electrical wiring & system Upgrades</h4>
+          <p class="muted">Ensure safety and efficiencywith our expect electrical wiring and system upgrades.<br> Our certified electricians handle installations, repairs and upgrades with precion</p>
+        </article>
+
+        <article class="card" role="article" aria-labelledby="srv3">
+          <img src="z.jpg" alt="Battery bank for solar backup systems">
+          <h4 id="srv3">Battery Backup & Inverters</h4>
+          <p class="muted">Lithium and advanced battery integrations, plus inverter installation for seamless backup during outages.</p>
+        </article>
+
+        <article class="card" role="article" aria-labelledby="srv4">
+          <img src="se.jpg" alt="Solar maintenance technician cleaning panels">
+          <h4 id="srv4">Maintenance & Servicing</h4>
+          <p class="muted">Preventive maintenance, cleaning, performance checks and repairs to keep systems efficient for decades.</p>
+        </article>
+
+        <article class="card" role="article" aria-labelledby="srv5">
+          <img src="bbb.jpeg" alt="Solar design blueprint">
+          <h4 id="srv5">Domestic and commercial Lighting solutions</h4>
+          <p class="muted">We offer stylish , energy-efficient options for homes and businesses, from cozy setups to industrial and outdoor Lighting.</p>
+        </article>
+
+        <article class="card" role="article" aria-labelledby="srv6">
+          <img src="dr.png">
+          <h4 id="srv6">Borehole drilling</h4>
+          <p class="muted">Get a sustainable water solution for your home , farm , or business with our expert Borehole drilling services<br>.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="section" aria-labelledby="products-heading">
+      <div class="section-title">
+        <h3 id="products-heading">Products We Supply</h3>
+        <div class="muted">High-quality panel brands, hybrid inverters and reliable battery systems.</div>
+      </div>
+
+      <div class="grid products-grid" style="margin-top:18px">
+        <div class="card">
+          <img src="so.jpg" alt="Close up of solar panels">
+          <h4>Solar Panels</h4>
+          <p class="muted">Monocrystalline & polycrystalline panels with high efficiency and warranties.</p>
+        </div>
+
+        <div class="card">
+          <img src="in.jpeg" alt="Inverter device mounted">
+          <h4>Inverters</h4>
+          <p class="muted">Hybrid and string inverters from dependable brands for stable power conversion.</p>
+        </div>
+
+        <div class="card">
+          <img src="ba.png" alt="Battery racks for energy storage">
+          <h4>Batteries & Storage</h4>
+          <p class="muted">Lithium and advanced lead-acid battery banks for backup and energy shifting.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & IMPACT -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="grid" style="grid-template-columns:2fr 1fr;align-items:start">
+        <div>
+          <div class="section-title">
+            <h3 id="about-heading">About Tukvolt Electrical</h3>
+            <div class="muted">Local installers with international standards — making solar affordable and dependable.</div>
+          </div>
+
+          <p style="margin-top:12px;color:var(--muted)">
+            Tukvolt Electrical Pvt Ltd is a Zimbabwean company specializing in solar power systems for homes and businesses. We design, supply and install systems that reduce energy costs, increase resilience and contribute to sustainable development. Our team handles everything — feasibility, procurement, installation, and long-term maintenance.
+          </p>
+
+          <div class="stat-row" role="list" style="margin-top:18px">
+            <div class="stat">
+              <div style="font-size:18px;font-weight:800;color:var(--brand)">2024</div>
+              <div class="muted">Mainly established</div>
+            </div>
+            <div class="stat">
+              <div style="font-size:18px;font-weight:800;color:var(--brand)">4</div>
+              <div class="muted">Directors</div>
+            </div>
+            <div class="stat">
+              <div style="font-size:18px;font-weight:800;color:var(--brand)">Harare</div>
+              <div class="muted">Mainly Based </div>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card" style="text-align:center">
+            <h4>Why choose Tukvolt?</h4>
+            <ul style="text-align:left;color:var(--muted);margin-top:12px;line-height:1.6">
+              <li>Quality equipment & certified installers</li>
+              <li>Transparent pricing & financing options</li>
+              <li>Local support & fast response</li>
+            </ul>
+            <div style="margin-top:14px">
+              <a class="btn btn-primary" href="https://wa.me/263789925225?text=Hello%20Tukvolt%2C%20I%20am%20interested%20in%20your%20services." target="_blank" rel="noopener">Request Site Visit</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="section-title">
+        <h3 id="contact-heading">Contact & Request a Quote</h3>
+        <div class="muted">Send us your inquiry or use WhatsApp for an immediate response.</div>
+      </div>
+
+      <div class="contact-grid" style="margin-top:16px">
+        <!-- Form (demo) -->
+        <div>
+          <form id="contactForm" onsubmit="handleContact(event)">
+            <input type="text" id="name" name="name" placeholder="Full name" required>
+            <input type="email" id="email" name="email" placeholder="Email address" required>
+            <input type="tel" id="phone" name="phone" placeholder="Phone number" required>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project" required></textarea>
+            <div style="display:flex;gap:12px;align-items:center">
+              <button class="submit" type="submit">Send message</button>
+              <!-- direct WhatsApp -->
+              <a class="btn btn-ghost" href="https://wa.me/263789925225?text=Hello%20Tukvolt%2C%20I%20need%20a%20quote%20for%20a%20solar%20installation." target="_blank" rel="noopener">Chat on WhatsApp</a>
+            </div>
+            <div id="formFeedback" style="margin-top:10px;color:var(--muted)"></div>
+          </form>
+        </div>
+
+        <!-- Contact details -->
+        <aside>
+          <div class="card">
+            <h4>Contact details</h4>
+            <p class="muted" style="margin-top:8px">Head Office: Harare, Zimbabwe</p>
+            <p style="margin-top:6px;font-weight:700">Phone: <a href="tel:+263 71 247 5438">+263 71 247 5438</a></p>
+            <p style="margin-top:6px">Email: <a href="mailto:tukvolt@outlook.com">tukvolt@outlook.com</a></p>
+
+            <div style="margin-top:12px">
+              <h5 style="margin:6px 0">Business hours</h5>
+              <p class="muted">Mon – Sat: 08:00 — 17:00</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
+      <div>© <strong>Tukvolt Electrical Pvt Ltd</strong> — Powering Zimbabwe with solar.</div>
+      <div class="muted">Designed for professional proposals • All rights reserved</div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <div class="whatsapp-float" aria-hidden="true">
+    <a href="https://wa.me/263712475438?text=Hello%20Tukvolt%2C%20I%20am%20interested%20in%20a%20solar%20installation." target="_blank" rel="noopener">
+      💬 WhatsApp
+    </a>
+  </div>
+
+  <script>
+    // Mobile nav toggle
+    function toggleNav(){
+      const links = document.querySelector('.nav-links');
+      const btn = document.querySelector('.hamburger');
+      if(!links) return;
+      const isHidden = getComputedStyle(links).display === 'none';
+      links.style.display = isHidden ? 'flex' : 'none';
+      btn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+    }
+
+    // Simple demo contact handler (replace with real endpoint)
+    function handleContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const feedback = document.getElementById('formFeedback');
+
+      if(!name || !phone || !email || !message){
+        feedback.textContent = 'Please complete all fields.';
+        return;
+      }
+
+      feedback.textContent = 'Sending message...';
+
+      // Demo: open WhatsApp with prefilled message if user prefers immediate chat
+      const waText = encodeURIComponent(`Hello Tukvolt, my name is ${name}. I need a quote: ${message}. Phone: ${phone}`);
+      // Show quick choice to continue to WhatsApp
+      setTimeout(()=>{
+        feedback.innerHTML = 'Message ready. <a href="https://wa.me/263789925225?text=' + waText + '" target="_blank" rel="noopener">Open WhatsApp to send</a>';
+        // optionally clear the form
+        // document.getElementById('contactForm').reset();
+      }, 700);
+    }
+  </script>
+</body>
+</html>
